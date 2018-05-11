@@ -11,8 +11,10 @@ The purpose of our project to look at how the combination of exercise and nutrit
 #### Previous Research into topic:
 Relationship Between Diet and Mental Health in Children and Adolescents: A Systematic Review
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4167107/ 
+
 Influences on the Development of Children's Eating Behaviours: From Infancy to Adolescence
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2678872/ 
+
 A Teenager’s Nutritional Needs
 https://www.healthychildren.org/English/ages-stages/teen/nutrition/Pages/A-Teenagers-Nutritional-Needs.aspx 
 
