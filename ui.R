@@ -29,6 +29,7 @@ shinyUI(navbarPage(title="INFO498", theme = "darkly",(
                    #tags$li("vansh stuff ",tags$b("")," and ")
            ),
            h3("Dataset"),
+           p("NPANS Dataset, Questionnaire, and Data Manuel can be found", tags$a(href="https://www.cdc.gov/healthyyouth/data/yrbs/nypans.htm", "here.")),
            p(" The National Youth Physical Activity and Nutrition Study (NYPANS) was conducted by the Centers for Disease Control and Prevention (CDC) in 2010 with three main purposes:
              \n1. To provide nationally representative data on behaviors and behavioral determinants related to nutrition and physical activity among high school students
              \n2. To provide data to help improve the clarity and strengthen the validity of questions on the Youth Risk Behavior Survey (YRBS)
@@ -47,8 +48,6 @@ shinyUI(navbarPage(title="INFO498", theme = "darkly",(
               be combined into an interactive information visualization for further considerations on whether such activity could be deemed as behavior to increase
               overall health."),
            br(),
-           p("NPANS Dataset, Questionnaire, and Data Manuel can be found", tags$a(href="https://www.cdc.gov/healthyyouth/data/yrbs/nypans.htm", "here.")),
-           
            h3("Target Audience"),
            p("The primary target audience our findings would be most impactful to those in the Department of Education
              who oversee policy implementation Office of Superintendent of Public Instruction's Food and Nutrition Services. 
@@ -63,7 +62,7 @@ shinyUI(navbarPage(title="INFO498", theme = "darkly",(
              As any educator knows, school is more than a learning institution, it is a second or even first home for many: providing students with 
              fundamental resources for success will fulfill the goal of our target audience as they seek information through our findings.")
     )
-  ),
+  )
   
   
   #title bar
@@ -94,4 +93,4 @@ shinyUI(navbarPage(title="INFO498", theme = "darkly",(
     )
   ))
 ))
-
+)
