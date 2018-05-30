@@ -1,33 +1,31 @@
-#ui page for the shiny app
-library(dplyr)
+# ui.R
 library(shiny)
+library(ggplot2)
 library(plotly)
-shinyUI(fluidPage(
-  #title bar
-  titlePanel("Sports Data"),
+library(dplyr)
+my_ui <- navbarPage(
+  "Nutrition and Excercise with Teenagers",
+  tabPanel(
+    "PE & Students",
+    sidebarLayout(
+      sidebarPanel(
+        selectInput("pefeels", "Student's Feelings about PE Class:",
+          choices = c(
+            "I didn't take PE"= "1",
+            "Strongly Disagree"= "2",
+            "Disagree"="3",
+            "Neither Agree Nor Disagree"= "4",
+            "Agree"= "5",
+            "Strongly Agree"= "6"
   
-  #side bar
-  sidebarLayout(
-    #sidebar Panel
-    sidebarPanel(
-      sliderInput('slider', 
-                   label="Days in a week you get exercise for more than 60 minutes", 
-                   min = 0,
-                   max = 7,
-                   value = 0
+          )
+        ),
+        radioButtons("datatype", "Students enjoy PE",
+          choices = c("Yes", "No")
+        )
       ),
-      selectInput('question', label = 'Select an insightful question about exercise', 
-                  choices = list("When I am physically active, I enjoy it." = 'enjoy',
-                                 "When I am physically active, I find it fun." = 'fun',
-                                 "When I am physically active, it gives me energy." = 'energy', 
-                                 "When I am physically active, my body feels good." = 'BodyIsGood',
-                                 "When I am physically active, it gives me a strong feeling ofsuccess." = 'success'
-                                 ))
-    ),
-    #main panel
-    mainPanel(
-      plotlyOutput("bar")
+      mainPanel(plotlyOutput("bar_plot"))
     )
   )
-))
-
+)
+shinyUI(my_ui)
