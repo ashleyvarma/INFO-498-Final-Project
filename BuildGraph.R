@@ -27,7 +27,8 @@ buildPlot <- function(dataset, slider, question){
   # Create Data Frame limtied to user selected stat
   x.equation = paste0("~",question)
   print("1")
-  newdata <- active %>% filter(e_q9 == slider) %>% filter(as.numeric(question) > 1) %>% group_by(question) %>% summarise(n())
+  active$e_q9 <- as.numeric(active$e_q9)
+  newdata <- active %>% filter(e_q9 == 2)  %>% group_by(BodyIsGood) %>% summarise(n())
   print(newdata)
   newdata$surveyed <- newdata$`n()`
   # Create a scatter plot of selected stat
