@@ -1,7 +1,3 @@
-# This is the server logic of our Shiny web application. 
-# install.packages("rsconnect")
-library("rsconnect")
-source('BuildGraph.R')
 library("shiny")
 library("dplyr")
 library("ggplot2")
